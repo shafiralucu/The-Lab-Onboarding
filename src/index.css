@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-transition {
+  animation: slideFade 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom sleek scrollbar for slides that need vertical breathing space */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+.slide-scroll-container {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  @media print {
+    body {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      padding: 0 !important;
+    }
+    header, nav, button, .no-print {
+      display: none !important;
+    }
+    .slide-card {
+      page-break-after: always !important;
+      break-after: page !important;
+      box-shadow: none !important;
+      border: 1px solid #cbd5e1 !important;
+      margin-bottom: 2rem !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+}

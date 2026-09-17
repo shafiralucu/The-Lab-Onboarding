@@ -1,0 +1,6 @@
+{
+  "name": "The Lab - Instructor Onboarding & Training",
+    "description": "Full-screen presentation deck for The Lab Instructor Onboarding & Training, featuring Day 1 credentials, 10-week roadmap, hands-on tool mastery, and KPI framework.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
